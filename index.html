@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuldeep Kumar — Full Stack Developer | Portfolio</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Portfolio of Kuldeep Kumar — Full Stack Developer from Delhi, India. Skilled in PHP, Python, Java, MySQL, AI, IoT & Data Science. BCA @ IGNOU." />
+  <meta name="author" content="Kuldeep Kumar" />
+  <meta name="keywords" content="Kuldeep Kumar, Full Stack Developer, PHP, Python, Java, MySQL, AI, IoT, Data Science, Delhi, Portfolio" />
+
+  <!-- Open Graph (WhatsApp / Social sharing) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kuldeep Kumar — Full Stack Developer" />
+  <meta property="og:description" content="Full Stack Developer from Delhi, India. PHP • Python • Java • MySQL • AI • IoT • Data Science." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kuldeep Kumar — Full Stack Developer" />
+  <meta name="twitter:description" content="Full Stack Developer from Delhi, India. PHP • Python • Java • MySQL • AI • IoT • Data Science." />
+  <meta name="twitter:image" content="assets/og-image.png" />
+  <!-- NOTE: Deploy hone ke baad og:image ko full URL karna (e.g. https://<username>.github.io/assets/og-image.png) -->
+
+  <!-- Favicon (inline SVG, no extra file needed) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2334d399'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='bold' fill='%23061017' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="no-scroll">
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-logo"><span>K</span></div>
+      <div class="preloader-name" aria-hidden="true">
+        <span>K</span><span>U</span><span>L</span><span>D</span><span>E</span><span>E</span><span>P</span>
+      </div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ============ SCROLL PROGRESS ============ -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ============ BACKGROUND FX ============ -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="nav-logo">Kuldeep<span>.dev</span></a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="assets/Kuldeep-Kumar-Resume.pdf" download class="btn btn-outline btn-sm nav-resume">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        Resume
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-eyebrow reveal" style="--d:.05s">Hello, I'm</p>
+          <h1 class="hero-title reveal" style="--d:.15s">
+            Kuldeep <span class="gradient-text">Kumar</span>
+          </h1>
+          <div class="hero-typing reveal" style="--d:.25s">
+            <span>I'm a</span>
+            <span class="typed-text" id="typed"></span>
+            <span class="caret" aria-hidden="true"></span>
+          </div>
+          <p class="hero-desc reveal" style="--d:.35s">
+            A passionate Full Stack Developer from Delhi, India. I build web experiences with
+            PHP, Python &amp; Java — and I love exploring AI, IoT &amp; Data Science.
+            Currently pursuing BCA from IGNOU.
+          </p>
+          <div class="hero-btns reveal" style="--d:.45s">
+            <a href="#contact" class="btn btn-primary">
+              Get In Touch
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="assets/Kuldeep-Kumar-Resume.pdf" download class="btn btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              Download Resume
+            </a>
+          </div>
+          <div class="hero-socials reveal" style="--d:.55s">
+            <a href="mailto:kuldeep2021.98@gmail.com" class="social-btn" aria-label="Email Kuldeep" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+            <a href="tel:+918527176898" class="social-btn" aria-label="Call Kuldeep" title="Call">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+            <a href="https://wa.me/918527176898" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp Kuldeep" title="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            </a>
+            <a href="https://www.upcomingfuture.space" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Visit my website" title="My Website">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-zoom reveal" style="--d:.3s">
+          <div class="avatar-ring">
+            <div class="avatar" aria-hidden="true">KK</div>
+          </div>
+          <div class="float-chip chip-1 tilt-chip" aria-hidden="true">PHP</div>
+          <div class="float-chip chip-2 tilt-chip" aria-hidden="true">Python</div>
+          <div class="float-chip chip-3 tilt-chip" aria-hidden="true">AI</div>
+          <div class="float-chip chip-4 tilt-chip" aria-hidden="true">MySQL</div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down" aria-label="Scroll to About section">
+        <span class="mouse"><span class="wheel"></span></span>
+      </a>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="Quick stats">
+      <div class="container stats-grid">
+        <div class="stat-card reveal" style="--d:.05s">
+          <span class="stat-num" data-target="1" data-suffix="+">0</span>
+          <span class="stat-label">Year Teaching Experience</span>
+        </div>
+        <div class="stat-card reveal" style="--d:.15s">
+          <span class="stat-num" data-target="10" data-suffix="+">0</span>
+          <span class="stat-label">Technologies &amp; Tools</span>
+        </div>
+        <div class="stat-card reveal" style="--d:.25s">
+          <span class="stat-num" data-target="4" data-suffix="">0</span>
+          <span class="stat-label">Academic Qualifications</span>
+        </div>
+        <div class="stat-card reveal" style="--d:.35s">
+          <span class="stat-num" data-target="100" data-suffix="%">0</span>
+          <span class="stat-label">Dedication &amp; Teamwork</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Get To Know</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual reveal-left reveal">
+            <div class="code-window" aria-hidden="true">
+              <div class="code-bar">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="code-file">kuldeep.js</span>
+              </div>
+              <pre class="code-body"><code><span class="c-key">const</span> <span class="c-var">kuldeep</span> <span class="c-op">=</span> <span class="c-punc">{</span>
+  <span class="c-prop">role</span><span class="c-punc">:</span> <span class="c-str">"Full Stack Developer"</span><span class="c-punc">,</span>
+  <span class="c-prop">location</span><span class="c-punc">:</span> <span class="c-str">"Delhi, India"</span><span class="c-punc">,</span>
+  <span class="c-prop">education</span><span class="c-punc">:</span> <span class="c-str">"BCA @ IGNOU"</span><span class="c-punc">,</span>
+  <span class="c-prop">diploma</span><span class="c-punc">:</span> <span class="c-str">"MDCE — Computer Engineering"</span><span class="c-punc">,</span>
+  <span class="c-prop">skills</span><span class="c-punc">:</span> <span class="c-punc">[</span><span class="c-str">"PHP"</span><span class="c-punc">,</span> <span class="c-str">"Python"</span><span class="c-punc">,</span> <span class="c-str">"Java"</span><span class="c-punc">,</span> <span class="c-str">"MySQL"</span><span class="c-punc">]</span><span class="c-punc">,</span>
+  <span class="c-prop">exploring</span><span class="c-punc">:</span> <span class="c-punc">[</span><span class="c-str">"AI"</span><span class="c-punc">,</span> <span class="c-str">"IoT"</span><span class="c-punc">,</span> <span class="c-str">"Data Science"</span><span class="c-punc">]</span><span class="c-punc">,</span>
+  <span class="c-prop">taught</span><span class="c-punc">:</span> <span class="c-str">"Software Engineering (1 yr)"</span><span class="c-punc">,</span>
+  <span class="c-prop">openToWork</span><span class="c-punc">:</span> <span class="c-bool">true</span>
+<span class="c-punc">}</span><span class="c-punc">;</span></code></pre>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <h3 class="about-subtitle reveal">A developer who loves to build — and to teach.</h3>
+            <p class="reveal" style="--d:.1s">
+              I'm <strong>Kuldeep Kumar</strong>, a Full Stack Developer and BCA student at IGNOU,
+              based in Delhi, India. I hold a Master Diploma in Computer Engineering (MDCE) and have
+              1 year of teaching experience in Software Engineering — which taught me that the best
+              way to master anything is to explain it to someone else.
+            </p>
+            <p class="reveal" style="--d:.2s">
+              I want to work with an organization that values professional growth &amp; learning, and
+              encourages creativity to make the organization successful with my abilities &amp; skills.
+              From writing code to understanding digital marketing, I enjoy wearing multiple hats.
+            </p>
+
+            <ul class="about-info reveal" style="--d:.3s">
+              <li><i class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></i>
+                <div><span>Name</span><strong>Kuldeep Kumar</strong></div></li>
+              <li><i class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></i>
+                <div><span>Location</span><strong>Delhi, India</strong></div></li>
+              <li><i class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></i>
+                <div><span>Languages</span><strong>Hindi, English</strong></div></li>
+              <li><i class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></i>
+                <div><span>Email</span><strong>kuldeep2021.98@gmail.com</strong></div></li>
+              <li><i class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></i>
+                <div><span>Phone</span><strong>+91 85271 76898</strong></div></li>
+              <li><i class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></i>
+                <div><span>Website</span><strong>upcomingfuture.space</strong></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- What I Do -->
+        <div class="services-grid">
+          <article class="card service-card tilt reveal" style="--d:.05s">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+            </div>
+            <h3>Full Stack Development</h3>
+            <p>Building complete web applications — from frontend interfaces to backend logic and databases with PHP, Python &amp; Java.</p>
+          </article>
+          <article class="card service-card tilt reveal" style="--d:.15s">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            </div>
+            <h3>AI &amp; Data Science</h3>
+            <p>Exploring Artificial Intelligence and Data Science — turning data into insights and ideas into intelligent solutions.</p>
+          </article>
+          <article class="card service-card tilt reveal" style="--d:.25s">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+            </div>
+            <h3>IoT Solutions</h3>
+            <p>Working with the Internet of Things — connecting devices, sensors and software to build smart, practical systems.</p>
+          </article>
+          <article class="card service-card tilt reveal" style="--d:.35s">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+            </div>
+            <h3>Digital Marketing</h3>
+            <p>Understanding how products reach people — digital marketing skills that complete the development loop.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">My Toolbox</span>
+          <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="card skill-card tilt reveal" style="--d:.05s">
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Programming</h3>
+            <p class="skill-desc">Core languages I code in</p>
+            <div class="chips">
+              <span class="chip">PHP</span>
+              <span class="chip">Python</span>
+              <span class="chip">Java</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">SQL</span>
+            </div>
+          </article>
+
+          <article class="card skill-card tilt reveal" style="--d:.15s">
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+            </div>
+            <h3>Full Stack Web</h3>
+            <p class="skill-desc">Everything a website needs</p>
+            <div class="chips">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Responsive Design</span>
+              <span class="chip">Backend APIs</span>
+            </div>
+          </article>
+
+          <article class="card skill-card tilt reveal" style="--d:.25s">
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 20 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg>
+            </div>
+            <h3>Emerging Tech</h3>
+            <p class="skill-desc">Fields I'm actively exploring</p>
+            <div class="chips">
+              <span class="chip">Artificial Intelligence</span>
+              <span class="chip">IoT</span>
+              <span class="chip">Data Science</span>
+            </div>
+          </article>
+
+          <article class="card skill-card tilt reveal" style="--d:.35s">
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+            </div>
+            <h3>Marketing &amp; Tools</h3>
+            <p class="skill-desc">Beyond code</p>
+            <div class="chips">
+              <span class="chip">Digital Marketing</span>
+              <span class="chip">MS Office</span>
+              <span class="chip">Teamwork</span>
+              <span class="chip">Teaching</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY ============ -->
+    <section id="journey" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Where I've Been</span>
+          <h2 class="section-title">My <span class="gradient-text">Journey</span></h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal" style="--d:.05s">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="card timeline-card">
+              <span class="badge badge-edu">Education — Pursuing</span>
+              <h3>BCA — Bachelor of Computer Applications</h3>
+              <p class="timeline-place">IGNOU (Indira Gandhi National Open University)</p>
+              <p>Deepening my computer science fundamentals while applying everything to real projects.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" style="--d:.1s">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="card timeline-card">
+              <span class="badge badge-edu">Education — Completed</span>
+              <h3>MDCE — Master Diploma in Computer Engineering</h3>
+              <p class="timeline-place">Master Diploma Program</p>
+              <p>Comprehensive diploma covering computer engineering — hardware, software and everything in between.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" style="--d:.15s">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="card timeline-card">
+              <span class="badge badge-exp">Experience — 1 Year</span>
+              <h3>Teaching — Software Engineering</h3>
+              <p class="timeline-place">Software Engineering Educator</p>
+              <p>Taught software engineering concepts for 1 year. Explaining complex topics simply made my own fundamentals stronger.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" style="--d:.2s">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="card timeline-card">
+              <span class="badge badge-edu">Education — 2021</span>
+              <h3>Senior Secondary (Class XII)</h3>
+              <p class="timeline-place">CBSE Board</p>
+              <p>Completed senior secondary education with a focus that led me towards computers.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" style="--d:.25s">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="card timeline-card">
+              <span class="badge badge-edu">Education — 2019</span>
+              <h3>Secondary School (Class X)</h3>
+              <p class="timeline-place">CBSE Board</p>
+              <p>Where the curiosity for technology first turned into a serious path.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">My Work</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="card project-card tilt reveal" style="--d:.05s">
+            <div class="project-top" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <span class="badge badge-live">Live Project</span>
+            <h3>upcomingfuture.space</h3>
+            <p>My personal website — my own space on the web where I publish and experiment. Visit it live and see what I've been building.</p>
+            <div class="chips">
+              <span class="chip">Website</span>
+              <span class="chip">Web</span>
+              <span class="chip">Live</span>
+            </div>
+            <a class="project-link" href="https://www.upcomingfuture.space" target="_blank" rel="noopener noreferrer">
+              Visit Website
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            </a>
+          </article>
+
+          <article class="card project-card tilt reveal" style="--d:.15s">
+            <div class="project-top" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <span class="badge badge-live">This Website</span>
+            <h3>Animated Developer Portfolio</h3>
+            <p>The site you're looking at — a fully animated single-page portfolio, hand-coded in vanilla HTML, CSS &amp; JavaScript. No frameworks, no templates. Hosted on GitHub Pages.</p>
+            <div class="chips">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Animations</span>
+            </div>
+            <a class="project-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" id="githubRepoLink">
+              View on GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            </a>
+          </article>
+
+          <article class="card project-card project-more reveal" style="--d:.25s">
+            <div class="project-top" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </div>
+            <h3>More Coming Soon</h3>
+            <p>I'm currently learning &amp; building new things with AI, IoT and full stack development. New projects will appear here — stay tuned!</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">What's Next?</span>
+          <h2 class="section-title">Let's <span class="gradient-text">Work Together</span></h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="contact-lead reveal">
+              Have a project in mind, an opportunity to discuss, or just want to say hi?
+              My inbox is always open — I'll get back to you as soon as I can.
+            </p>
+
+            <a href="tel:+918527176898" class="card contact-card reveal" style="--d:.05s">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span><span class="contact-label">Call Me</span><strong>+91 85271 76898</strong></span>
+            </a>
+
+            <a href="https://wa.me/918527176898" target="_blank" rel="noopener noreferrer" class="card contact-card reveal" style="--d:.12s">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              </span>
+              <span><span class="contact-label">WhatsApp</span><strong>Chat With Me</strong></span>
+            </a>
+
+            <a href="mailto:kuldeep2021.98@gmail.com" class="card contact-card reveal" style="--d:.19s">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </span>
+              <span><span class="contact-label">Email</span><strong>kuldeep2021.98@gmail.com</strong></span>
+            </a>
+
+            <div class="card contact-card reveal" style="--d:.26s">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span><span class="contact-label">Location</span><strong>West Karawal Nagar, Delhi — 110094</strong></span>
+            </div>
+          </div>
+
+          <form class="card contact-form reveal" id="contactForm" style="--d:.2s">
+            <h3>Send a Message</h3>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-name">Your Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="e.g. Rahul Sharma" required />
+              </div>
+              <div class="form-field">
+                <label for="cf-email">Your Email</label>
+                <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" placeholder="Hi Kuldeep, I saw your portfolio and..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            </button>
+            <p class="form-note">This opens your email app with the message ready — no server needed.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">Kuldeep<span>.dev</span></p>
+      <p class="footer-tag">Designed &amp; built by Kuldeep Kumar — Delhi, India</p>
+      <p class="footer-copy">© <span id="year">2026</span> Kuldeep Kumar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating buttons -->
+  <a href="https://wa.me/918527176898" target="_blank" rel="noopener noreferrer" class="float-wa" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+  </a>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
